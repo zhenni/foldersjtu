@@ -1,0 +1,620 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home | Folder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="folder">
+    <meta name="author" content="">
+
+    <script src="js/jquery.js"></script>
+	<link rel='icon' href='css/img/favicon.ico' type='image/ico' />
+
+    <!--[if lt IE 9]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="js/ie.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    
+    <link href="css/reset.css" rel="stylesheet">
+	<link href="css/add.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/nivo.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/custom_colors.html" rel="stylesheet">
+	
+	<script LANGUAGE="javascript">
+		function loginBox() {
+			document.getElementById("loginBoxDiv").style.display="block";
+			document.getElementById("loginFilter").style.display="block";
+		}
+		function closeLoginBox() {
+			document.getElementById("registerBoxDiv").style.display="none";
+			document.getElementById("loginBoxDiv").style.display="none";
+			document.getElementById("loginFilter").style.display="none";
+		}
+		function registerBox() {
+			document.getElementById("registerBoxDiv").style.display="block";
+			document.getElementById("loginFilter").style.display="block";
+		}
+
+	</script> 
+
+</head>
+
+<body>
+
+<div id="page_wrap">
+
+		<div id="loginBoxDiv" class="logRegBoxDiv">
+			<div id="loginBoxDivHeader" class="logRegBoxDivHeader">
+				<label for="login">Login</label>
+			</div>
+			
+			
+			<div id="loginBoxDivForm" class="logRegBoxDivForm">
+				<form name="login" method=get onsubmit="return check_all_fields(this)">
+					<div>
+					<li><label for="login_name">login name:</label></li>
+						<input type=text name="login_name" length=10 placeholder="Enter your login name">
+					</div>
+					<div>
+						<li><label for="password">password:</label></li>
+						<input type="password" name="password" length=10 placeholder="password">
+					</div>
+					<button type="submit"> Submmit</button>
+				</form>
+			</div>
+		</div>
+		
+		<div id="registerBoxDiv" class="logRegBoxDiv">
+			<div id="registerBoxDivHeader" class="logRegBoxDivHeader">
+				<label for="register">Register</label>
+			</div>
+			
+			<div id="registerBoxDivForm" class="logRegBoxDivForm">
+				
+				<form name="register" method=get onsubmit="return check_all_fields(this)">
+					<div>
+						<li><label for="login_name">login name</label></li>
+						<input type="text" name="login_name" length=20 placeholder="login name">
+					</div>
+					<div>
+						<li><label for="password">password</label></li>
+						<input type="password" name="password" length=20 placeholder="password">
+					</div>
+					<div>
+						<li><label for="email">email<label></li>
+						<input type="text" name="email" length=20 placeholder="your email">
+					</div>
+					<button type="submit"> Submmit</button>
+				</form>
+			</div>
+			
+		</div>
+		
+		<div id="loginFilter" onClick="closeLoginBox()">
+		</div>
+		<!-- Login & Register Box Side ENDS -->
+
+    <header>
+
+        <div class="logo-container">
+
+            <a id="logo" title="Folder" href="index.html"><img src="css/img/logo.png" alt="Folder"></a>
+
+        </div><!-- Logo Side ENDS -->
+
+        <nav>
+
+            <ul id="menu">
+                <li>
+                    <div class="menu-abs-bg background-color"></div>
+                    <div class="home-icon menu-specs">
+                        <a href="#home" title="Home Page">Home</a>
+                        <span>&nbsp;常用网站</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-abs-bg background-color"></div>
+                    <div class="aboutus-icon menu-specs">
+                        <a href="video.html" title="Video">Video</a>
+                        <span>&nbsp;&nbsp;视&nbsp;&nbsp;&nbsp;&nbsp;频</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-abs-bg background-color"></div>
+                    <div class="services-icon menu-specs">
+                        <a href="Shopping.html" title="Shopping">Shopping</a>
+                        <span>&nbsp;&nbsp;购&nbsp;&nbsp;&nbsp;&nbsp;物</span>
+                    </div>
+					
+                </li>
+                <li>
+                    <div class="menu-abs-bg background-color"></div>
+                    <div class="portfolio-icon menu-specs">
+                        <a href="games.html" title="Games">Games</a>
+                        <span>&nbsp;&nbsp;游&nbsp;&nbsp;&nbsp;&nbsp;戏</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-abs-bg background-color"></div>
+                    <div class="blog-icon menu-specs">
+                        <a href="" title="Settings">Settings</a>
+                        <span>&nbsp;&nbsp;设&nbsp;&nbsp;&nbsp;&nbsp;置</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-abs-bg background-color"></div>
+                </li>
+            </ul><!-- Menu ENDS -->
+
+        </nav><!-- Nav ENDS -->
+
+    </header><!-- Left Side ENDS -->
+
+    <div id="subLevel" class="border-color background-color">
+
+        <div id="opener" class="border-left-color border-top-color"><div class="opener-plus"></div></div>
+        <ul id="home">
+            <li><a class="border-color-darker" href="index.html">Home</a></li>
+            <li><a class="border-color-darker" href="index-normal-slider.html">Normal Slider</a></li>
+            <li><a class="border-color-darker" href="index.html">Metro Slider</a></li>
+        </ul>
+    </div><!-- Sub Level ENDS -->
+
+    <div class="rightSide">
+
+		<div id="loginDiv">
+			<button type="button" onClick="loginBox()">Login</button>
+			<button type="button" onClick="registerBox()">Register</button>
+		</div>
+
+
+            <div class="six columns" style="margin-top: 14px; margin-left: 16px;">
+
+                <div class="announce announce-icon">Welcome to Folder!</div>
+            </div>
+
+
+        
+
+        <div class="row">
+
+            <div class="twelve columns">
+
+                <div class="metro-wrapper">
+                <div id="scrollbar1">
+                <div class="scrollbar"><div class="track"><div class="thumb background-color"><div class="end"></div></div></div></div>
+                <div class="viewport">
+                <div class="overview">
+                    <div class="metro-slider">
+
+                        <div class="col">
+							
+							<div class="metro-item full">
+							
+                                <a class="metro-image" href="http://www.google.com" target="_blank" title="portfolio link"><img src="photos/metro-slider-1.png" alt="portfolio"></a>
+
+                                <div class="metro-description background-color-trans">
+                                    <div class="metro-icon img-icon deactive"></div>
+
+                                    <div class="metro-misc">
+
+                                        <a class="metro-title" href="http://www.google.com" target="_blank" title="Google">Google</a>
+
+                                        <div class="metro-text">
+											<a href="http://www.google.com" target="_blank">http://www.google.com</a> </br></br>
+											Google Search
+										</div>
+
+                                    </div>
+									
+                                </div>
+                            </div>
+							
+                            <div class="metro-item half">
+
+                                <a class="metro-image" href="portfolio-details.html" target="_blank" title="portfolio link"><img src="photos/metro-slider-2.png" alt="portfolio"></a>
+
+                                <div class="metro-description background-color-trans">
+                                    <div class="metro-icon img-icon deactive"></div>
+
+                                    <div class="metro-misc">
+
+                                        <a class="metro-title" href="http://www.renren.com" target="_blank" title="人人网">人人网</a>
+										
+                                        <div class="metro-text"> <a href="http://www.renren.com" target="_blank">http://www.renren.com</a> </br></br>
+										人人网是一个真实的社交网络,联络你和你周围的朋友。</br> 加入人人网你可以:联络朋友,了解他们的最新动态;和朋友分享相片、音乐和电影;找到老同学,结识新朋友...</div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="metro-item half">
+
+                                <a class="metro-image" href="#" title="portfolio link"><img src="photos/metro-slider-3.png" alt="portfolio"></a>
+
+                                <div class="metro-description background-color-trans hidden">
+                                    <div class="metro-icon img-icon deactive"></div>
+
+                                    <div class="metro-misc">
+
+                                        <a class="metro-title" href="#" title="News">索契冬奥会</a>
+
+                                        <div class="metro-text">								
+											2月7日，索契冬奥会开幕式的奥运五环。</br> 摄影：David Gray
+										</div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div><!-- COL ENDS -->
+
+                        <div class="col">
+
+                            <div class="metro-item half">
+
+                                <a class="metro-image" href="#" title="portfolio link"><img src="photos/metro-slider-4.png" alt="portfolio"></a>
+
+                                <div class="metro-description background-color-trans hidden">
+                                    <div class="metro-icon img-icon deactive"></div>
+
+                                    <div class="metro-misc">
+
+                                        <a class="metro-title" href="#" title="News">叙利亚</a>
+
+                                        <div class="metro-text">9月27日，叙利亚库尔德难民留下一个摇篮在土耳其和叙利亚的边境。</br> 摄影：Murad Sezer
+										</div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="metro-item half">
+
+                                <a class="metro-image" href="#" title="portfolio link"><img src="photos/metro-slider-5.png" alt="portfolio"></a>
+
+                                <div class="metro-description background-color-trans hidden">
+                                    <div class="metro-icon img-icon deactive"></div>
+
+                                    <div class="metro-misc">
+
+                                        <a class="metro-title" href="#" title="News">耶路撒冷</a>
+
+                                        <div class="metro-text">7月6日，Tariq Khdeir从耶路撒冷的监狱获释之日，他母亲迎接他。</br> 摄影：Ronen Zvulun</div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="metro-item half">
+
+                                <a class="metro-image" href="#" title="portfolio link"><img src="photos/metro-slider-6.png" alt="portfolio"></a>
+
+                                <div class="metro-description background-color-trans hidden">
+                                    <div class="metro-icon img-icon deactive"></div>
+
+                                    <div class="metro-misc">
+
+                                        <a class="metro-title" href="#" title="News">弗格森枪击案示威</a>
+
+                                        <div class="metro-text">11月25日，一名黑人男子在一栋燃烧的大楼前走过，当天美国大陪审团决定不起诉弗格森枪击案涉案警察，大批示威者表示不满。</br> 摄影：Jim Young</div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="metro-item half">
+
+                                <a class="metro-image" href="#" title="portfolio link"><img src="photos/metro-slider-7.png" alt="portfolio"></a>
+
+                                <div class="metro-description background-color-trans hidden">
+                                    <div class="metro-icon img-icon deactive"></div>
+
+                                    <div class="metro-misc">
+
+									<a class="metro-title" href="#" title="News">加沙停火</a>
+
+                                        <div class="metro-text">8月26日，在加沙停火后，巴勒斯坦儿童与手持枪支，庆祝他们认为的战胜以色列。</br> 摄影：Suhaib Salem.</div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div><!-- COL ENDS -->
+
+                        <div class="col">
+
+                            <div class="metro-item half">
+
+                                <a class="metro-image" href="#" title="portfolio link"><img src="photos/metro-slider-8.png" alt="portfolio"></a>
+
+                                <div class="metro-description background-color-trans hidden">
+                                    <div class="metro-icon img-icon deactive"></div>
+
+                                    <div class="metro-misc">
+
+                                        <a class="metro-title" href="#" title="News">尼加拉瓜瀑布冰瀑</a>
+
+                                        <div class="metro-text">1月8日，北美因为受到极地涡漩寒冷气流影响，尼加拉瓜瀑布都被冻成了冰瀑。</br> 摄影：Aaron Harris</div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="metro-item half">
+
+                                <a class="metro-image" href="#" title="portfolio link"><img src="photos/metro-slider-9.png" alt="portfolio"></a>
+
+                                <div class="metro-description background-color-trans hidden">
+                                    <div class="metro-icon img-icon deactive"></div>
+
+                                    <div class="metro-misc">
+
+                                        <a class="metro-title" href="#" title="News">委内瑞拉加拉加斯</a>
+
+                                        <div class="metro-text">4月2日，委内瑞拉加拉加斯，1994年后，这座楼就烂尾，现在大约有3000人把这些烂尾楼看做自己的家。30楼，男人在捡完废弃物后，在30楼休息。</br> 摄影：Jorge Silva</div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+							
+							
+                            <div class="metro-item full">
+
+                                <a class="metro-image" href="#" title="portfolio link"><img src="photos/metro-slider-10.png" alt="portfolio"></a>
+
+                                <div class="metro-description background-color-trans hidden">
+                                    <div class="metro-icon img-icon deactive"></div>
+
+                                    <div class="metro-misc">
+
+                                        <a class="metro-title" href="#" title="News">H7N9</a>
+
+                                        <div class="metro-text">1月27日，香港政府下令扑杀20000多只鸡以防范H7N9的传播。卫生官员在全套防护装备后，前往交叉路附近的家禽批发市场。</br> 摄影：Tyrone Siu</div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div><!-- COL ENDS -->
+
+                    </div><!-- METRO SLIDER ENDS -->
+                </div>
+                </div>
+                </div>
+                </div><!-- METRO WRAPPER ENDS -->
+
+            </div><!-- TWELVE COLUMNS ENDS -->
+
+        </div><!-- Slider Row ENDS -->
+
+        <div class="row" id="info-row">
+
+            <div class="twelve columns">
+
+                <div class="title connection-icon">Infomation</div></br>
+
+				<div class="margin-tb-20" id="text_info">Today: Marry Chrismas!</div>
+            </div>
+
+        </div>
+		
+        <div class="row" id="suggestion-index-row">
+
+            <div class="twelve columns">
+			
+			<div class="title star-icon-b">精彩推荐</div>
+
+                <div class="carousel margin-tb-20">
+
+                    <div class="item">
+
+                        <img src="photos/car1.png" alt="carousel item" />
+
+                        <div class="item-background background-color"></div>
+
+                        <a href="#" class="itemsubtitle" title="carousel item"> 男主曾演过《雨果》和《穿条纹睡衣的男孩》</a>
+                        <a href="#" class="itemtitle" title="carousel item">安德的游戏</a>
+
+                    </div>
+
+                    <div class="item">
+
+                        <img src="photos/car2.png" alt="carousel item" />
+
+                        <div class="item-background background-color"></div>
+
+                        <a href="#" class="itemtitle" title="carousel item">霍比特人</a>
+                        <a href="#" class="itemsubtitle" title="carousel item">根据英国作家J.R.R·托尔金1937年出版的同名长篇小说改编。又名《哈比特人历险记》。</a>
+
+                    </div>
+
+                    <div class="item">
+
+                        <img src="photos/car3.png" alt="carousel item" />
+
+                        <div class="item-background background-color"></div>
+
+                        <a href="#" class="itemtitle" title="carousel item">迷宫行者</a>
+                        <a href="#" class="itemsubtitle" title="carousel item">托马斯（Dylan O’Brien 饰演）醒来发现身处一个由巨石组成的巨大迷宫中，他只记得自己的名字...</a>
+
+                    </div>
+
+                    <div class="item">
+
+                        <img src="photos/car4.png" alt="carousel item" />
+
+                        <div class="item-background background-color"></div>
+
+                        <a href="#" class="itemtitle" title="carousel item">银河卫士</a>
+                        <a href="#" class="itemsubtitle" title="carousel item">一群来自不同星球的超级英雄战士聚在一起保卫银河系，他们中很多都是自己种族中的最后一人...</a>
+
+                    </div>
+
+                    <div class="item">
+
+                        <img src="photos/car5.png" alt="carousel item" />
+
+                        <div class="item-background background-color"></div>
+
+                        <a href="#" class="itemtitle" title="carousel item">诺亚</a>
+                        <a href="#" class="itemsubtitle" title="carousel item">达伦·阿罗诺夫斯基（黑天鹅）重温诺亚方舟的神话，罗素·克洛出演主角。</a>
+
+                    </div>
+
+                    <div class="item">
+
+                        <img src="photos/car6.png" alt="carousel item" />
+
+                        <div class="item-background background-color"></div>
+
+                        <a href="#" class="itemtitle" title="carousel item">超凡蜘蛛侠2</a>
+                        <a href="#" class="itemsubtitle" title="carousel item">4月30日始，杰米·福克斯和安德鲁·加菲尔德在《蜘蛛侠》的新篇章中再度碰头展开对决。</a>
+
+                    </div>
+
+                    <div class="item">
+
+                        <img src="photos/car7.png" alt="carousel item" />
+
+                        <div class="item-background background-color"></div>
+
+                        <a href="#" class="itemtitle" title="carousel item">Interstellar</a>
+                        <a href="#" class="itemsubtitle" title="carousel item"> 影片基于理论物理学家Kip Thorne的理论，讲述探险者穿越虫洞的关于时间旅行与平行宇宙的故事。</a>
+
+                    </div>
+
+<div class="item">
+
+                        <img src="photos/car1.png" alt="carousel item" />
+
+                        <div class="item-background background-color"></div>
+
+                        <a href="#" class="itemsubtitle" title="carousel item"> 男主曾演过《雨果》和《穿条纹睡衣的男孩》</a>
+                        <a href="#" class="itemtitle" title="carousel item">安德的游戏</a>
+
+                    </div>
+
+                    <div class="item">
+
+                        <img src="photos/car2.png" alt="carousel item" />
+
+                        <div class="item-background background-color"></div>
+
+                        <a href="#" class="itemtitle" title="carousel item">霍比特人</a>
+                        <a href="#" class="itemsubtitle" title="carousel item">根据英国作家J.R.R·托尔金1937年出版的同名长篇小说改编。又名《哈比特人历险记》。</a>
+
+                    </div>
+
+                    <div class="item">
+
+                        <img src="photos/car3.png" alt="carousel item" />
+
+                        <div class="item-background background-color"></div>
+
+                        <a href="#" class="itemtitle" title="carousel item">迷宫行者</a>
+                        <a href="#" class="itemsubtitle" title="carousel item">托马斯（Dylan O’Brien 饰演）醒来发现身处一个由巨石组成的巨大迷宫中，他只记得自己的名字...</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div><!-- Carousel ENDS -->
+
+        
+        <div class="row">
+
+            <div class="six columns">
+
+                <form class="gray-box" method="post" action="">
+
+                    <label class="gray-box-title" for="your-mail-address">Email us : </label>
+
+                    <input class="gray-box-input" id="your-mail-address" type="email" name="e-mail" placeholder="Your mail address"required />
+
+                    <input class="gray-box-submit background-color" type="submit" value="Email">
+
+                </form>
+
+            </div><!-- Newsletter Box ENDS -->
+
+            <div class="six columns">
+
+                <div class="gray-box">
+
+                    <div class="gray-box-title">Follow me : </div>
+
+                    <a class="social-icons social-facebook" title="Join Our Facebook Group" href="#">121.624</a>
+                    <a class="social-icons social-twitter" title="Join Our Twitter Group" href="#">121.624</a>
+                    <a class="social-icons social-youtube" title="Subscribe To Our Channel" href="#">121.624</a>
+
+                </div>
+
+            </div><!-- Follow me Box ENDS -->
+
+        </div><!-- Gray Boxes ENDS -->
+
+       
+
+        <div class="row footer background-color">
+
+            <div class="twelve columns">
+
+                <div class="footer-menu">
+
+                    <a href="index.html" class="left" title="Home">Home</a>
+                    <a href="video.html" class="left" title="About Us">Video</a>
+                    <a href="shopping.html" class="left" title="Services">Shopping</a>
+                    <a href="games.html" class="left" title="Solutions">Games</a>
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div><!-- RightSide ENDS -->
+
+</div><!-- Page Wrap ENDS -->
+
+<div id="toTop"></div>
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/isotope.js"></script>
+
+<script src="js/caroufredsel.js"></script>
+<script src="js/nivo.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script src="js/tinyscrollbar.js"></script>
+<script src="js/custom.js"></script>
+<!--[if lte IE 9]>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+</body>
+</html>
